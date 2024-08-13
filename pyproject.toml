@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "web_researcher"
+version = "0.1.34"
+description = ""
+authors = [
+    "Sameer Sharma <sameer.sharma@portfoliot.com>",
+    "Zaitrarrio Collier <zay.collier@portfoliot.com>",
+    "Max Bay <max.bay@portfoliot.com>",
+    "Kelvin Oliveira <kelvin.oliveira@portfoliot.com>"
+]
+readme = "README.md"
+
+packages = [
+    {include = "researcher", from = "src"},
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.2"
+flake8 = "^7.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

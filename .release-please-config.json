@@ -1,0 +1,10 @@
+{
+  "packages": {
+    ".": {
+      "package-name": "web-researcher",
+      "release-type": "python",
+      "pull-request-title-pattern": "chore: release web-researcher components v${version} to ${branch}",
+      "group-pull-request-title-pattern": "chore: release web-researcher components v${version} to ${branch}"
+    }
+  }
+}

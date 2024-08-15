@@ -1,14 +1,17 @@
 from typing import Annotated, Sequence, TypedDict
 import functools
 import operator
+
+from langchain.agents import create_openai_tools_agent, AgentExecutor
+from langchain_community.tools import TavilySearchResults
+from langchain_core.messages import BaseMessage, HumanMessage
 from langchain_core.output_parsers.openai_functions import JsonOutputFunctionsParser
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_experimental.tools import PythonREPLTool
-from langchain.agents import AgentExecutor, create_openai_tools_agent
-from langchain_core.messages import BaseMessage, HumanMessage
 from langchain_openai import ChatOpenAI
-from langgraph.graph import END, StateGraph, START
+from langgraph.constants import END, START
+from langgraph.graph import StateGraph
+
 
 class AgentState(TypedDict):
     # The annotation tells the graph that new messages will always
@@ -76,7 +79,7 @@ class WebResearcher:
         )
 
     def _create_research_agent(self):
-        sp = '''You are a web researcher and an expert writing a market research document. 
+        sp = '''You are a web web_researcher and an expert writing a market research document. 
         You will be given a research objective with a lot of information. Some of that information might need dot be ignored. 
     
         IGNORE: income, age, gender, vecational etc. demographic information.
@@ -113,7 +116,7 @@ class WebResearcher:
     
     """    
     def _create_research_agent(self):
-        sp = '''You are a web researcher and an expert writing a market research document. 
+        sp = '''You are a web web_researcher and an expert writing a market research document. 
         You will be given a topic and your objective is to perform market research on the provided topic. 
         Always provide sources alongside claims. Every claim must have a source. Write hyperlink sources as shorthand in markdown. Also include sources at bottom of page.
         Statista and Euromonitor are good sources for market data, though don't limit yourself to them.

@@ -22,17 +22,17 @@ jobs:
         virtualenvs-in-project: true
 
     - name: Update Poetry and dependencies
-      working-directory: ./packages/python/laila-api
+      working-directory: .
       run: |
         poetry self update
         poetry update
 
     - name: Install project dependencies
-      working-directory: ./packages/python/laila-api
+      working-directory: .
       run: poetry install --no-interaction
       
 
     - name: Run tests
-      working-directory: ./packages/python/laila-api
+      working-directory: .
       run: |
         poetry run pytest

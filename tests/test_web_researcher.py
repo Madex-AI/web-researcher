@@ -1,7 +1,9 @@
 import unittest
-from unittest.mock import MagicMock
-from researcher.web_researcher import WebResearcher
+
 import re
+
+from web_researcher.web_researcher import WebResearcher
+
 
 class TestWebResearcher(unittest.TestCase):
     def setUp(self):
@@ -24,17 +26,16 @@ class TestWebResearcher(unittest.TestCase):
 
     def test_perform_research(self):
         research_question = "Perform market research on the topic of electric vehicles in the United States."
-        
+
         # Call the method
         result = self.researcher.perform_research(research_question)
-        
+
         # Assert the result is a non-empty string
         self.assertIsInstance(result, str)
         self.assertTrue(len(result) > 0)
-        
+
         # Check if the result contains Markdown elements
         self.assertTrue(self.contains_markdown(result))
-
 
 
 if __name__ == '__main__':

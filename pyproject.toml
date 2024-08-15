@@ -11,12 +11,29 @@ authors = [
 readme = "README.md"
 
 packages = [
-    {include = "researcher", from = "src"},
+    {include = "web_researcher", from = "src"},
 ]
 
 [tool.poetry.dependencies]
 python = "^3.11"
+langchain = "^0.2.14"
+langchain-openai = "^0.1.21"
+langgraph = "^0.2.3"
+langchain-community = "^0.2.12"
+langchain-experimental = "^0.0.64"
+langchain-core = "^0.2.32"
+python-dotenv-vault = "^0.6.4"
 
+[tool.pytest.ini_options]
+pythonpath = "src"
+
+log_auto_indent = "True"
+testpaths = [
+    "tests"
+]
+python_files = [
+    "test_*.py",
+]
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.2"

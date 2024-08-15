@@ -1,5 +1,9 @@
 name: Python Tests
 
+env:
+    DOTENV_KEY: ${{ secrets.DOTENV_KEY }}
+    DOTENV_ME: ${{ secrets.DOTENV_ME }}
+
 on:
   push:
     branches: [ main ]

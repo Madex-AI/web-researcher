@@ -91,61 +91,36 @@ class WebResearcher:
         Always start with an appropriate title.
         Given the research objective, search the web to provide details for the following fields noted with -, with subfields (where needed) noted with *. 
 
-        -Introduction
+        Use the following template to structure the output. 
+        Use # for document heading
+        Use ## for section titles
+        Use ### for sub-section titles
 
-        -Market Overview
-        *Size of market
-        *Market trends
-        *Consumer demographics (age, gender, income, etc. - sourcing is critical here) 
-        *(Optional field for things you deem important)
+        # Introduction
 
-        -Competitor Analysis
-        *Key players (list all major and minor competitors)
-        *Market share
-        *(Optional field for things you deem important)
+        ## Market Overview
+        ### Size of market
+        ### Market trends
+        ### Consumer demographics (age, gender, income, etc. - sourcing is critical here) 
+        ### (Optional field for things you deem important)
 
-        -SWOT Analysis (emphasis on opportunities)
+        ## Competitor Analysis
+        ### Key players (list all major and minor competitors)
+        ### Market share
+        ### (Optional field for things you deem important)
 
-        -Regulatory Landscape
+        ## SWOT Analysis (emphasis on opportunities)
 
-        -Key Insights/Quirks of the market in this country or region 
+        ## Regulatory Landscape
 
-        -Summary
+        ## Key Insights/Quirks of the market in this country or region 
+
+        ## Summary
+
+        ## Sources
         '''
         return self._create_agent(self.llm_researcher, [self.tavily_tool], sp)
-    
-    """    
-    def _create_research_agent(self):
-        sp = '''You are a web web_researcher and an expert writing a market research document. 
-        You will be given a topic and your objective is to perform market research on the provided topic. 
-        Always provide sources alongside claims. Every claim must have a source. Write hyperlink sources as shorthand in markdown. Also include sources at bottom of page.
-        Statista and Euromonitor are good sources for market data, though don't limit yourself to them.
-        Always start with an appropriate title.
-        Given the research objective, search the web to provide details for the following fields noted with -, with subfields (where needed) noted with *. 
 
-        -Introduction
-
-        -Market Overview
-        *Size of market
-        *Market trends
-        *Consumer demographics (age, gender, income, etc. - sourcing is critical here) 
-        *(Optional field for things you deem important)
-
-        -Competitor Analysis
-        *Key players (list all major and minor competitors)
-        *Market share
-        *(Optional field for things you deem important)
-
-        -SWOT Analysis (emphasis on opportunities)
-
-        -Regulatory Landscape
-
-        -Key Insights/Quirks of the market in this country or region 
-
-        -Summary
-        '''
-        return self._create_agent(self.llm_researcher, [self.tavily_tool], sp)
-    """
     def _create_agent(self, llm: ChatOpenAI, tools: list, system_prompt: str):
         prompt = ChatPromptTemplate.from_messages(
             [

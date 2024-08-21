@@ -135,7 +135,7 @@ class WebResearcher:
         7. In the SWOT Analysis, place emphasis on opportunities in the market.
         8. Discuss the regulatory landscape relevant to the market.
         9. Highlight key insights specific to the market in the given country or region.
-        10. Provide a detailed summary of the main findings in relation to the research question. 
+        10. Provide a detailed summary of the findings from your research. Be verbose and detailed.  
         If appropriate,
            10 a. Start the summary with a popular marketing quote or a relevant quote from a business leader with a citation.
            10 b. Include recommendations for further research at the end.

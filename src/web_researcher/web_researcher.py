@@ -81,18 +81,13 @@ class WebResearcher:
     def _create_research_agent(self):
         sp = '''You are a web web_researcher and an expert writing a market research document. You are
         tasked with creating a comprehensive market research document given a research
-        objective that contains various information. Your goal is to analyze this objective and produce
+        question in the history that contains various information. Your goal is to analyze this question and produce
         a well-structured market research report.
-
-        Here is the research objective:
-        <research_objective>
-        {objective}
-        </research_objective>
 
         Important guidelines:
         1. Ignore specific demographic information such as income, age, gender, and vocational details.
         2. Focus on broader market and regional information (country, city, etc.).
-        3. Infer the main topic from the research objective and conduct your market research based on this.
+        3. Infer the main topic from the research question and conduct your market research based on this.
 
         Structure your document using the following template:
 
@@ -140,7 +135,7 @@ class WebResearcher:
         7. In the SWOT Analysis, place emphasis on opportunities in the market.
         8. Discuss the regulatory landscape relevant to the market.
         9. Highlight key insights specific to the market in the given country or region.
-        10. Provide a detailed summary of the main findings in relation to the research objective. 
+        10. Provide a detailed summary of the main findings in relation to the research question. 
         If appropriate,
            10 a. Start the summary with a popular marketing quote or a relevant quote from a business leader with a citation.
            10 b. Include recommendations for further research at the end.
@@ -148,7 +143,7 @@ class WebResearcher:
 
         Remember to provide sources for every claim, and format your document according to
         the structure provided. Your goal is to create a comprehensive, well-sourced, and
-        insightful market research document based on the given research objective.
+        insightful market research document based on the given research question.
         '''
         return self._create_agent(self.llm_researcher, [self.tavily_tool], sp)
 

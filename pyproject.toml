@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "web_researcher"
-version = "0.2.0"
+version = "0.3.0"
 description = ""
 authors = [
     "Sameer Sharma <sameer.sharma@portfoliot.com>",

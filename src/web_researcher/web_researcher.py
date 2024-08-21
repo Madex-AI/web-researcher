@@ -115,7 +115,7 @@ class WebResearcher:
 
         ## Regulatory Landscape
 
-        ## Key Insights/Quirks of the market
+        ## Key Insights
 
         ## Summary
 
@@ -139,8 +139,11 @@ class WebResearcher:
         - Include an optional field for other relevant competitive information
         7. In the SWOT Analysis, place emphasis on opportunities in the market.
         8. Discuss the regulatory landscape relevant to the market.
-        9. Highlight key insights or quirks specific to the market in the given country or region.
-        10. Provide a concise summary of the main findings.
+        9. Highlight key insights specific to the market in the given country or region.
+        10. Provide a detailed summary of the main findings in relation to the research objective. 
+        If appropriate,
+           10 a. Start the summary with a popular marketing quote or a relevant quote from a business leader with a citation.
+           10 b. Include recommendations for further research at the end.
         11. List all sources used at the end of the document.
 
         Remember to provide sources for every claim, and format your document according to

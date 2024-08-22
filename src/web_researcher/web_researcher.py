@@ -90,6 +90,8 @@ class WebResearcher:
         3. Infer the main topic from the research question and conduct your market research based on this.
 
         Structure your document using the following template:
+        
+        <template>
 
         # [Appropriate Title based on the inferred topic]
 
@@ -110,7 +112,7 @@ class WebResearcher:
 
         ## Regulatory Landscape
 
-        ## Key Insights
+        ## Research Key Insights
 
         ## Summary
 
@@ -118,6 +120,8 @@ class WebResearcher:
         
         
         #### This report was curated just for you by Laila from Madex.
+        
+        </template>
 
         Follow these instructions for creating your document:
 

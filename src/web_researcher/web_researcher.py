@@ -115,6 +115,9 @@ class WebResearcher:
         ## Summary
 
         ## Sources
+        
+        
+        #### This report was curated just for you by Laila from Madex.
 
         Follow these instructions for creating your document:
 
